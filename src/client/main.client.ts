@@ -1,12 +1,8 @@
+import { CustomService1Client } from 'server/custom-service-1';
 import KnitClient from 'shared/Knit/KnitClient';
 
 KnitClient.Start();
 
-abstract class CustomService1 {
-    public Name = 'Custom Service 1';
-    public abstract async DoTask(who: string): Promise<void>;
-}
-
-const CustomService: CustomService1 = KnitClient.GetService('Custom Service 1') as CustomService1;
+const CustomService: CustomService1Client = KnitClient.GetService('Custom Service 1') as CustomService1Client;
 
 CustomService.DoTask('client');

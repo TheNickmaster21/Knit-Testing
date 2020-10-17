@@ -1,24 +1,11 @@
 import KnitServer from 'shared/Knit/KnitServer';
+import { CustomService1 } from './custom-service-1';
 
 KnitServer.CreateService({
     Name: 'Test Service',
     KnitInit: () => print('Test Service Init'),
     KnitStart: () => print('Test Service Start')
 });
-
-const CustomService1 = {
-    Name: 'Custom Service 1',
-    KnitInit: () => print('Custom Service 1 Init'),
-    DoTask: (who: string) => {
-        print(`Did Task for ${who}!`);
-    },
-    Client: {
-        // Service has to be the first argument because Lua reasons?
-        DoTask: (service: unknown, player: Player, who: string) => {
-            print(`Did Task for ${who} (Player ${player.Name})!`);
-        }
-    }
-};
 
 KnitServer.CreateService(CustomService1);
 
@@ -36,4 +23,4 @@ KnitServer.Start().then(() => {
     print('Started Knit!');
 });
 
-export {};
+export default {};
