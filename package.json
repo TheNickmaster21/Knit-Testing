@@ -1,0 +1,7 @@
+{
+    "name": "knit-testing",
+    "devDependencies": {
+        "@rbxts/types": "^1.0.336"
+    },
+    "dependencies": {}
+}
