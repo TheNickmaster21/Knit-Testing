@@ -8,7 +8,7 @@ KnitServer.CreateService({
 
 const CustomService1 = {
     Name: 'Custom Service 1',
-    KnitInit: () => print('Cusotm Service Init'),
+    KnitInit: () => print('Custom Service 1 Init'),
     DoTask: (who: string) => {
         print(`Did Task for ${who}!`);
     },
@@ -24,7 +24,7 @@ KnitServer.CreateService(CustomService1);
 
 const CustomService2 = {
     Name: 'Custom Service 2',
-    KnitInit: () => print('Cusotm Service Init'),
+    KnitInit: () => print('Custom Service 2 Init'),
     KnitStart: () => {
         CustomService1.DoTask('server');
     }

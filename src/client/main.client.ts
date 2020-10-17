@@ -9,5 +9,4 @@ abstract class CustomService1 {
 
 const CustomService: CustomService1 = KnitClient.GetService('Custom Service 1') as CustomService1;
 
-// This
 CustomService.DoTask('client');
