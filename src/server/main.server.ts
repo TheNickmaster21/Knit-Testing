@@ -13,7 +13,7 @@ const CustomService1 = {
         print(`Did Task for ${who}!`);
     },
     Client: {
-        // This is behaving strange
+        // Service has to be the first argument because Lua reasons?
         DoTask: (service: unknown, player: Player, who: string) => {
             print(`Did Task for ${who} (Player ${player.Name})!`);
         }
